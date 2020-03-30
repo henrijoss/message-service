@@ -1,0 +1,36 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  //backdrop-filter: blur(5px);
+  //-webkit-backdrop-filter: blur(5px);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(0,0,0,0.850577731092437) 32%, rgba(0,0,0,0.7413340336134453) 47%, rgba(0,0,0,0.6320903361344538) 57%, rgba(255,255,255,0) 100%);
+  z-index: 9;
+  height: 7rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .header-headline {
+    flex: 1;
+  }
+  .header-sign-in {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+      color: white;
+      margin-right: 1rem;
+      transition: ease-in-out 0.2s;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    button {
+      margin-right: 3rem;
+    }
+  }
+}

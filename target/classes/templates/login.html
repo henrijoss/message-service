@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="de" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head th:include="fragments :: meta('Nachrichtendienst')">-->
+<!--    Meta-->
+<!--</head>-->
+<!--<body>-->
+<!--<header th:include="fragments :: kopfbereich('Nachrichten', 'createMessage')">-->
+<!--    Musterheader-->
+<!--</header>-->
+<!--<main id="login">-->
+<!--    <form method="post" action="login.html">-->
+<!--        <div class="login-container">-->
+<!--            <div class="login-box">-->
+<!--                <input type="text" name="firstname" placeholder="Vorname" required><br/>-->
+<!--                <input type="text" name="lastname" placeholder="Nachname" required><br/>-->
+<!--            </div>-->
+<!--            <div class="register-box">-->
+<!--                <input type="password" name="password" placeholder="Passwort"-->
+<!--                       title="Geben Sie ihr Passwort ein" required><br/>-->
+<!--                <input type="submit" name="submit"><br/>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</main>-->
+<!--<footer>-->
+
+<!--</footer>-->
+<!--</body>-->
+
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head th:include="fragments :: meta('Nachrichtendienst')">
+    Meta
+</head>
+<body>
+<header th:include="fragments :: kopfbereich('Login', 'createMessage')">
+    Musterheader
+</header>
+<main id="login">
+    <form action="/security/spring_security_check" method="POST">
+        <input class="inputField" type="text" name="username" placeholder="Benutzername?"/><br />
+        <input class="inputField" type="password" name="password" placeholder="Passwort?"><br />
+        <input class="submitButton" value="Anmelden" type="submit">
+    </form>
+</main>
+
+</body>
+</html>

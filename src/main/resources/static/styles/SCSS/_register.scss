@@ -1,0 +1,55 @@
+#register {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 12rem;
+    label {
+        color: white;
+    }
+    input, input[type=text], input[type=email], input[type=submit] {
+        width: 15rem;
+        color: white;
+        font-size: 16px;
+        &:focus input::placeholder{
+            color: $bg-color;
+        }
+    }
+    input[type=text], input[type=email], input[type=password] {
+        background-color: $bg-color;
+        padding: 12px 20px;
+        margin: 0.5rem 0rem 0.5rem 0rem;
+        border: 2px solid $secondary-color;
+        border-radius: 50px;
+        &::placeholder {
+            color: $grey-color;
+            font-size: 16px;
+        }
+      }
+      input[type=submit] {
+        font-size: 16px;
+        color: white;
+        padding: 12px 20px;
+        margin: 0.5rem 0rem 0.5rem 0rem;
+        background-color: $secondary-color;
+        border: 2px solid $secondary-color;
+        border-radius: 50px;
+        width: 100%;
+        transition: ease-in-out 0.2s;
+        &:hover {
+            background-color: $bg-color;
+        }
+      }
+      .register-container {
+          display: flex;
+        .register-box {
+            flex: 1;
+            margin: 0.5rem;
+          }
+      }
+}
+
+#registerSuccess {
+  h1 {
+    margin-top: 10rem;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments :: meta('Nachrichtendienst')">
+    Meta
+</head>
+<body>
+<header th:include="fragments :: kopfbereich('Registrieren', 'register')">
+    Musterheader
+</header>
+<main id="register">
+    <form method="post" action="registerSave.html">
+        <div class="register-container">
+            <div class="register-box">
+                <input type="text" name="firstname" placeholder="Vorname" required><br/>
+                <input type="text" name="lastname" placeholder="Nachname" required><br/>
+                <input type="email" name="email" placeholder="E-Mail" required><br/>
+            </div>
+            <div class="register-box">
+                <input type="password" name="password" placeholder="Passwort"
+                       title="Geben Sie ein sicheres Passwort ein" required><br/>
+                <input type="password" name="password-repeat" placeholder="Passwort wiederholen" required><br/>
+                <input type="submit" name="submit"><br/>
+            </div>
+        </div>
+    </form>
+</main>
+<footer>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://stevenbenner.github.io/jquery-powertip/scripts/jquery.powertip.js"></script>
+<script src="./scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+@import "variables";
+@import "chat";
+@import "header";
+@import "fonts";
+@import 'register';
+@import 'login';
+
+* {
+  margin: 0;
+  padding: 0;
+  display: border-box !important;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: "Noto Sans SC", sans-serif;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+h1 {
+  color: $primary-color;
+  padding: 2rem;
+  padding-left: 3rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 100;
+}
+
+strong {
+  font-weight: 800;
+}
+
+textarea, input {
+  font-family: "Questrial", sans-serif;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+*:focus {
+    outline: none;
+}
+
+.active {
+  font-weight: bold;
+  color: $secondary-color !important;
+}
+
+.btn-primary {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 12px;
+  border: 2px solid $secondary-color;
+  background-color: $secondary-color;
+  color: $primary-color;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    background-color: $bg-color;
+    color: white !important;
+  }
+}
+
+  .btn-secondary {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 12px;
+    border: 2px solid $secondary-color;
+    background-color: $bg-color;
+    color: $primary-color;
+    transition: ease-in-out 0.2s;
+    &:hover {
+      background-color: $secondary-color;
+      color: black !important;
+    }
+}

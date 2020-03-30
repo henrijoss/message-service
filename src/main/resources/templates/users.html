@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments :: meta('Nachrichtendienst')">
+    Meta
+</head>
+<body>
+<header th:include="fragments :: kopfbereich('User', 'user')">
+    Musterheader
+</header>
+<main>
+    <div class="chat">
+        <p th:if="${users == null}">
+            Nachrichtenliste ist leer
+        </p>
+        <article class="chat-list" th:if="${users != null}">
+            <section class="chat-message" th:each="user : ${users}">
+                <p class="name" th:text="${user.fullname}">User</p>
+            </section>
+        </article>
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+
+</html>

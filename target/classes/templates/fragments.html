@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="meta(titel)">
+    <meta charset="utf-8">
+    <title th:text="${titel}">Nachrichtendienst</title>
+    <meta name="description" content="Zusammenfassung des Inhalts">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./styles/SCSS/style.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://stevenbenner.github.io/jquery-powertip/styles/jquery.powertip.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://stevenbenner.github.io/jquery-powertip/scripts/jquery.powertip.js"></script>
+    <script src="./scripts/script.js"></script>
+</head>
+<body>
+<header th:fragment="kopfbereich(titel, active)">
+        <div class="header-container">
+            <div class="header-hea/sectionne">
+                <h1 sec:authorize="isAnonymous()" th:text="${titel}">Überschrift</h1>
+                <h1 sec:authorize="isAuthenticated()" sec:authentication="name">Überschrift</h1>
+            </div>
+            <div class="header-sign-in">
+                <a th:class="${active == 'messageForm'} ? 'active'" href="messageForm.html">Neue Nachricht</a>
+                <a th:class="${active == 'messages'} ? 'active'" href="messages.html">Nachrichten</a>
+                <a th:class="${active == 'user'} ? 'active'" href="users.html">User</a>
+                <a sec:authorize="isAnonymous()" th:class="${active == 'register'} ? 'active'" href="register.html">Registrieren</a>
+                <a class="btn-primary" sec:authorize="isAnonymous()" href="/login.html">Anmelden</a>
+                <a class="btn-secondary" sec:authorize="isAuthenticated()" href="/security/spring_security_logout">
+                    Abmelden
+                </a>
+            </div>
+        </div>
+</header>
+</body>
+</html>

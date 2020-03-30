@@ -1,0 +1,390 @@
+.chat {
+  padding: 2rem;
+  padding-top: 7rem;
+  height: 80vh;
+  overflow-y: scroll !important;
+}
+.chat .chat-message {
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(70, 113, 156, 0.3);
+  border-radius: 10px;
+  position: relative;
+  transition: ease-in-out 0.3s;
+}
+.chat .chat-message .name {
+  color: white;
+  padding-bottom: 0.2rem;
+}
+.chat .chat-message .massage {
+  color: white;
+  font-family: "Questrial", sans-serif;
+}
+.chat .chat-message .timestamp {
+  color: #8fa0ba;
+  font-size: 10px;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+}
+.chat .chat-message:first-child {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.chat .chat-message:last-child {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-bottom: 6rem;
+}
+.chat .chat-message:hover {
+  transform: scale(1.02);
+}
+
+.chat-input {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  height: 6rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(117, 191, 255, 0.22);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat-input input[type=text] {
+  display: border-box;
+  color: white;
+  font-size: 16px;
+  background-color: #121217;
+  padding: 12px 20px;
+  border: 2px solid #377ce6;
+  border-radius: 50px;
+}
+.chat-input input[type=text]::placeholder {
+  color: #8fa0ba;
+  font-size: 16px;
+}
+.chat-input button[type=submit] {
+  flex: 1;
+  height: 2.9rem;
+  width: 2.9rem;
+  color: white;
+  padding: 12px 20px;
+  background-color: #377ce6;
+  border: 2px solid #377ce6;
+  border-radius: 50px;
+  position: relative;
+  transition: ease-in-out 0.2s;
+}
+.chat-input button[type=submit]:hover {
+  background-color: #121217;
+}
+.chat-input button[type=submit]:hover .send-icon {
+  color: white;
+}
+.chat-input button[type=submit] img {
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  right: 0.6rem;
+  top: 0.54rem;
+}
+.chat-input .input-box {
+  flex: 3;
+  max-width: 100%;
+  margin-right: 0.5rem;
+  position: relative;
+}
+.chat-input .input-box .location img {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 3.2rem;
+  left: 1rem;
+}
+.chat-input .input-box .location p {
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  top: 3.1rem;
+  left: 2rem;
+}
+.chat-input .input-box input {
+  width: -webkit-fill-available;
+}
+.chat-input .input-location {
+  flex: 1;
+  max-width: 100%;
+  margin-right: 0.5rem;
+}
+.chat-input .input-location input {
+  width: -webkit-fill-available;
+}
+.chat-input .input-send {
+  flex: 1;
+  max-width: 3rem;
+}
+
+.input-message-count {
+  position: fixed;
+  bottom: 0.4rem;
+  right: 7.7rem;
+  color: #a8a8a8;
+  font-size: 12px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(180deg, black 15%, rgba(0, 0, 0, 0.8505777311) 32%, rgba(0, 0, 0, 0.7413340336) 47%, rgba(0, 0, 0, 0.6320903361) 57%, rgba(255, 255, 255, 0) 100%);
+  z-index: 9;
+  height: 7rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-container .header-headline {
+  flex: 1;
+}
+.header-container .header-sign-in {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-container .header-sign-in a {
+  color: white;
+  margin-right: 1rem;
+  transition: ease-in-out 0.2s;
+}
+.header-container .header-sign-in a:hover {
+  color: #377ce6;
+}
+.header-container .header-sign-in button {
+  margin-right: 3rem;
+}
+
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Thin.otf") format("truetype");
+}
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Light.otf") format("truetype");
+}
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Bold.otf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Black.otf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Questrial";
+  src: url("../../fonts/Questrial/Questrial-Regular.eot");
+  src: local("Questrial"), local("Questrial-Regular"), url("../../fonts/Questrial/Questrial-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/Questrial/Questrial-Regular.woff2") format("woff2"), url("../../fonts/Questrial/Questrial-Regular.woff") format("woff"), url("../../fonts/Questrial/Questrial-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+#register {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+}
+#register label {
+  color: white;
+}
+#register input, #register input[type=text], #register input[type=email], #register input[type=submit] {
+  width: 15rem;
+  color: white;
+  font-size: 16px;
+}
+#register input:focus input::placeholder, #register input[type=text]:focus input::placeholder, #register input[type=email]:focus input::placeholder, #register input[type=submit]:focus input::placeholder {
+  color: #121217;
+}
+#register input[type=text], #register input[type=email], #register input[type=password] {
+  background-color: #121217;
+  padding: 12px 20px;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  border: 2px solid #377ce6;
+  border-radius: 50px;
+}
+#register input[type=text]::placeholder, #register input[type=email]::placeholder, #register input[type=password]::placeholder {
+  color: #8fa0ba;
+  font-size: 16px;
+}
+#register input[type=submit] {
+  font-size: 16px;
+  color: white;
+  padding: 12px 20px;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  background-color: #377ce6;
+  border: 2px solid #377ce6;
+  border-radius: 50px;
+  width: 100%;
+  transition: ease-in-out 0.2s;
+}
+#register input[type=submit]:hover {
+  background-color: #121217;
+}
+#register .register-container {
+  display: flex;
+}
+#register .register-container .register-box {
+  flex: 1;
+  margin: 0.5rem;
+}
+
+#registerSuccess h1 {
+  margin-top: 10rem;
+}
+
+#login {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 13rem;
+}
+#login label {
+  color: white;
+}
+#login input, #login input[type=text], #login input[type=email], #login input[type=submit] {
+  width: 15rem;
+  color: white;
+  font-size: 16px;
+}
+#login input:focus input::placeholder, #login input[type=text]:focus input::placeholder, #login input[type=email]:focus input::placeholder, #login input[type=submit]:focus input::placeholder {
+  color: #121217;
+}
+#login input[type=text], #login input[type=email], #login input[type=password] {
+  background-color: #121217;
+  padding: 12px 20px;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  border: 2px solid #377ce6;
+  border-radius: 50px;
+}
+#login input[type=text]::placeholder, #login input[type=email]::placeholder, #login input[type=password]::placeholder {
+  color: #8fa0ba;
+  font-size: 16px;
+}
+#login input[type=submit] {
+  font-size: 16px;
+  color: white;
+  padding: 12px 20px;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  background-color: #377ce6;
+  border: 2px solid #377ce6;
+  border-radius: 50px;
+  width: 8rem;
+  transition: ease-in-out 0.2s;
+}
+#login input[type=submit]:hover {
+  background-color: #121217;
+}
+#login .register-container {
+  display: flex;
+}
+#login .register-container .register-box {
+  flex: 1;
+  margin: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  display: border-box !important;
+}
+
+body {
+  background-color: #121217;
+  font-family: "Noto Sans SC", sans-serif;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+h1 {
+  color: white;
+  padding: 2rem;
+  padding-left: 3rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 100;
+}
+
+strong {
+  font-weight: 800;
+}
+
+textarea, input {
+  font-family: "Questrial", sans-serif;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+.active {
+  font-weight: bold;
+  color: #377ce6 !important;
+}
+
+.btn-primary {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 12px;
+  border: 2px solid #377ce6;
+  background-color: #377ce6;
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+.btn-primary:hover {
+  background-color: #121217;
+  color: white !important;
+}
+
+.btn-secondary {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 12px;
+  border: 2px solid #377ce6;
+  background-color: #121217;
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+.btn-secondary:hover {
+  background-color: #377ce6;
+  color: black !important;
+}
+
+/*# sourceMappingURL=style.css.map */

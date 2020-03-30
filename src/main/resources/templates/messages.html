@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments :: meta('Nachrichtendienst')">
+    Meta
+</head>
+<body>
+<script type="text/javascript" th:inline="text"> var lastClientMessage = [[${lastClientMessage}]];
+</script>
+<script type="text/javascript" src="./scripts/ajax.js"></script>
+<header th:include="fragments :: kopfbereich('Nachrichten', 'messages')">
+    Musterheader
+</header>
+<main>
+    <div class="chat">
+        <p th:if="${messages == null}">
+            Nachrichtenliste ist leer
+        </p>
+        <article class="chat-list" th:if="${messages != null}">
+            <section class="chat-message" th:each="message : ${messages}">
+                <p class="name" th:text="${message.user.fullname}"><strong>Max Mustermann</strong>></p>
+                <p class="massage" th:text="${message.text}">Mustertext</p>
+                <time class="timestamp" th:text="${message.date}"><i>01. Januar 1856</i></time>
+            </section>
+        </article>
+    </div>
+    <form action="/createMessage.html">
+        <div class="chat-input">
+            <div class="input-box">
+                <div class="location"><img src="./icons/location.svg" /><p class="city">Standort wird geladen...</p></div>
+                <input class="input-message" type="text" name="chatInput" placeholder="Neue Nachricht" title="Geben Sie eine Nachricht zum versenden ein">
+            </div>
+            <div class="input-send">
+                <button class="input-send" type="submit" name="send"><img
+                        src="./icons/arrow-point-to-right.svg"></button>
+            </div>
+        </div>
+    </form>
+    <div class="input-message-count"></div>
+</main>
+<footer>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Thin.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Bold.otf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Noto-Sans-SC";
+  src: url("./fonts/Noto_Sans_SC/NotoSansSC-Black.otf") format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Questrial';
+  src: url('../../fonts/Questrial/Questrial-Regular.eot');
+  src: local('Questrial'), local('Questrial-Regular'),
+      url('../../fonts/Questrial/Questrial-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/Questrial/Questrial-Regular.woff2') format('woff2'),
+      url('../../fonts/Questrial/Questrial-Regular.woff') format('woff'),
+      url('../../fonts/Questrial/Questrial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

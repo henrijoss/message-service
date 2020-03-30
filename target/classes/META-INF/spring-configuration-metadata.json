@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "remoting",
+      "type": "de.hfu.RemotingConfiguration",
+      "sourceType": "de.hfu.RemotingConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "remoting.service-host",
+      "type": "java.lang.String",
+      "sourceType": "de.hfu.RemotingConfiguration"
+    }
+  ],
+  "hints": []
+}
